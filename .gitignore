@@ -11,3 +11,5 @@
 /composer.phar
 /web/css/compiled/*
 /web/js/compiled/*
+/UPGRADE*
+/.idea/
