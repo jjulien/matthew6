@@ -1,0 +1,7 @@
+parameters:
+#    m6_matthew6.example.class: M6\Matthew6Bundle\Example
+
+services:
+#    m6_matthew6.example:
+#        class: %m6_matthew6.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

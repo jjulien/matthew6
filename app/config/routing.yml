@@ -1,0 +1,4 @@
+m6_matthew6:
+    resource: "@M6Matthew6Bundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}The Matthew6 Project{% endblock %}</title>
+    <script src="{{ asset('bundles/m6matthew6/js/vendor/custom.modernizr.js') }}"></script>
+    {% block stylesheets %}
+        {% stylesheets filter="compass,cssrewrite"
+            "@M6Matthew6Bundle/Resources/public/scss/master.scss"
+            output="css/compiled/styles.css"
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}" media="screen" />
+        {% endstylesheets %}
+    {% endblock stylesheets %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    {% block javascripts %}
+        {# zepto does NOT support IE, if we want IE support load jquery.js instead of zepto.js #}
+        {% javascripts
+            '@M6Matthew6Bundle/Resources/public/js/vendor/zepto.js'
+            '@M6Matthew6Bundle/Resources/public/js/foundation/foundation.js'
+            output='js/compiled/main.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        <script>
+            $(document).foundation( function(response) {
+                console.log(response.errors);
+            });
+        </script>
+    {% endblock javascripts %}
+</body>
