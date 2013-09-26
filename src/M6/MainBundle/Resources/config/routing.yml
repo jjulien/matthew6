@@ -1,0 +1,3 @@
+default_index:
+    pattern:  /
+    defaults: { _controller: M6MainBundle:Default:index }

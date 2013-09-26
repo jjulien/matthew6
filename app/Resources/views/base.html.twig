@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{% block title %}The Matthew6 Project{% endblock %}</title>
-    <script src="{{ asset('bundles/m6matthew6/js/vendor/custom.modernizr.js') }}"></script>
+    <script src="{{ asset('bundles/m6main/js/vendor/custom.modernizr.js') }}"></script>
     {% block stylesheets %}
         {% stylesheets filter="compass,cssrewrite"
-            "@M6Matthew6Bundle/Resources/public/scss/master.scss"
+            "@M6MainBundle/Resources/public/scss/master.scss"
             output="css/compiled/styles.css"
         %}
         <link rel="stylesheet" href="{{ asset_url }}" media="screen" />
         {% endstylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/m6matthew6/css/custom_fonts.css') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/m6main/css/custom_fonts.css') }}" />
     {% endblock stylesheets %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
@@ -41,8 +41,8 @@
     {% block javascripts %}
         {# zepto does NOT support IE, if we want IE support load jquery.js instead of zepto.js #}
         {% javascripts
-            '@M6Matthew6Bundle/Resources/public/js/vendor/zepto.js'
-            '@M6Matthew6Bundle/Resources/public/js/foundation/foundation.js'
+            '@M6MainBundle/Resources/public/js/vendor/zepto.js'
+            '@M6MainBundle/Resources/public/js/foundation/foundation.js'
             output='js/compiled/main.js'
         %}
         <script src="{{ asset_url }}"></script>
