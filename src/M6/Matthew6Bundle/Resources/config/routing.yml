@@ -1,3 +1,0 @@
-m6_matthew6_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: M6Matthew6Bundle:Default:index }

@@ -13,11 +13,30 @@
         %}
         <link rel="stylesheet" href="{{ asset_url }}" media="screen" />
         {% endstylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/m6matthew6/css/custom_fonts.css') }}" />
     {% endblock stylesheets %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
-<body>
-    {% block body %}{% endblock %}
+<body style="background-color: #435c68; color: #efefef;">
+    {% block header %}
+        <div class="row" style="padding: 20px 0 40px 0;">
+            <div class="large-6 columns">
+                <span style="font-family: josefin_sans_stdlight, sans-serif, serif; font-size: 48px;">the matthew</span>
+                <span style="font-family: josefin_sans_stdlight, sans-serif, serif; font-size: 48px; color: #ff4e19;">6</span>&nbsp;&nbsp;
+                <span style="font-family: josefin_sans_stdlight, sans-serif, serif; font-size: 48px;">project</span>
+            </div>
+            <div class="large-3 large-offset-3 columns">
+                <div style="float: right;">
+                    {#<span style="font-size: 16px; vertical-align: bottom; padding-right: 10px;">my account</span>#}
+                    {#<img src="http://gravatar.com/avatar/ecb566c47c401bb8699580d2f9c220d1?s=50" />#}
+                </div>
+            </div>
+        </div>
+    {% endblock header %}
+
+    {% block body %}
+
+    {% endblock %}
 
     {% block javascripts %}
         {# zepto does NOT support IE, if we want IE support load jquery.js instead of zepto.js #}
